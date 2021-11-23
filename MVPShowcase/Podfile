@@ -1,0 +1,24 @@
+platform :ios, '14.0'
+use_frameworks!
+inhibit_all_warnings!
+
+def all_pods
+  pod 'netfox'
+  pod 'BMPlayer', '~> 1.3.0'
+  pod 'Firebase/Crashlytics'
+  pod 'Firebase/Analytics'
+  pod 'SDWebImage', '~> 5.0'
+  pod 'CountryPickerView'
+end
+
+target 'MVPShowcase' do
+  all_pods
+  
+  target 'MVPShowcaseTests' do
+    inherit! :search_paths
+  end
+
+  target 'MVPShowcaseUITests' do
+    
+  end
+end
